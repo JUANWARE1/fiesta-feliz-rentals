@@ -6,13 +6,13 @@ import { useLanguage } from "@/context/LanguageContext";
 const ContactButtons = ({ vertical = false }: { vertical?: boolean }) => {
   const { t } = useLanguage();
   
-  const phoneNumber = "+5215555555555"; // Replace with real phone number
+  const phoneNumber = "+523320343573"; // Número de WhatsApp actualizado
   
   return (
     <div className={`fixed bottom-6 ${vertical ? 'right-6 flex flex-col gap-4' : 'right-6 flex gap-4'} z-50`}>
       <Button 
         size="lg" 
-        className={`bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center ${vertical ? 'flex-col py-6' : 'gap-2'}`}
+        className={`bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center ${vertical ? 'flex-col py-6' : 'gap-2'} shadow-lg`}
         onClick={() => window.open(`https://wa.me/${phoneNumber}`, '_blank')}
       >
         <MessageSquare className="h-5 w-5" />
@@ -20,11 +20,11 @@ const ContactButtons = ({ vertical = false }: { vertical?: boolean }) => {
       </Button>
       <Button 
         size="lg" 
-        className={`bg-beboy-red hover:bg-beboy-red/80 text-white flex items-center ${vertical ? 'flex-col py-6' : 'gap-2'}`}
+        className={`bg-beboy-red hover:bg-beboy-red/80 text-white flex items-center ${vertical ? 'flex-col py-6' : 'gap-2'} shadow-lg`}
         onClick={() => window.open(`tel:${phoneNumber}`, '_blank')}
       >
         <Phone className="h-5 w-5" />
-        <span>{phoneNumber}</span>
+        <span>+52 33 2034 3573</span>
       </Button>
     </div>
   );

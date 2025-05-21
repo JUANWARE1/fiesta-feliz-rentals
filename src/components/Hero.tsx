@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-beboy-yellow hover:bg-beboy-yellow/90 text-beboy-black font-bold text-lg"
+                className="bg-beboy-yellow hover:bg-beboy-yellow/90 text-beboy-black font-bold text-lg shadow-md"
                 asChild
               >
                 <Link to="/products">
@@ -37,7 +37,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10 font-bold text-lg"
+                className="border-white text-white hover:bg-white/10 font-bold text-lg shadow-md backdrop-blur-sm bg-white/5"
                 asChild
               >
                 <Link to="/contact">
