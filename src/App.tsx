@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Videos from "./pages/Videos";
 
 // Components
 import Header from "./components/Header";
@@ -41,6 +42,7 @@ const App = () => (
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/videos" element={<Videos />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

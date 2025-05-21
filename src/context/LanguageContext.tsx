@@ -19,6 +19,7 @@ const translations = {
     "nav.contact": "Contacto",
     "nav.blog": "Blog",
     "nav.testimonials": "Testimonios",
+    "nav.videos": "Videos",
     
     // Services
     "services.title": "Nuestros Servicios",
@@ -36,6 +37,10 @@ const translations = {
     "services.water": "Inflables Acuáticos",
     "services.water.desc": "Diversión acuática para días calurosos",
     
+    // Videos
+    "videos.title": "Videos Funcionales",
+    "videos.subtitle": "Mira nuestros productos en acción",
+    
     // Products
     "products.title": "Productos y Costos",
     "products.subtitle": "Encuentra el inflable perfecto para tu evento",
@@ -45,6 +50,7 @@ const translations = {
     "products.filter": "Filtrar por",
     "products.all": "Todos",
     "products.search": "Buscar producto",
+    "products.rentNow": "Renta ahora",
     
     // Contact
     "contact.title": "Contacto",
@@ -93,6 +99,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.blog": "Blog",
     "nav.testimonials": "Testimonials",
+    "nav.videos": "Videos",
     
     // Services
     "services.title": "Our Services",
@@ -110,6 +117,10 @@ const translations = {
     "services.water": "Water Inflatables",
     "services.water.desc": "Water fun for hot days",
     
+    // Videos
+    "videos.title": "Functional Videos",
+    "videos.subtitle": "See our products in action",
+    
     // Products
     "products.title": "Products and Pricing",
     "products.subtitle": "Find the perfect inflatable for your event",
@@ -119,6 +130,7 @@ const translations = {
     "products.filter": "Filter by",
     "products.all": "All",
     "products.search": "Search product",
+    "products.rentNow": "Rent now",
     
     // Contact
     "contact.title": "Contact",
