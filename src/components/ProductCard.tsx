@@ -13,7 +13,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const { t } = useLanguage();
   
   const handleRentNow = () => {
-    const message = encodeURIComponent(`Hola, estoy interesado en rentar el producto: ${product.nombre}`);
+    const message = encodeURIComponent(`Hola, estoy interesado en rentar: ${product.nombre} (${product.tipo})`);
     const whatsappUrl = `https://wa.me/523320343573?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
