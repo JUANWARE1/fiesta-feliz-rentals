@@ -82,6 +82,7 @@ const translations = {
     "footer.location": "Ubicación",
     "footer.phone": "Teléfono",
     "footer.email": "Correo electrónico",
+    "footer.horarios":"Horarios de atención",
     
     // Types
     "type.brincolín": "Brincolín",
@@ -162,6 +163,7 @@ const translations = {
     "footer.location": "Location",
     "footer.phone": "Phone",
     "footer.email": "Email",
+    "footer.horarios":"Office Hours",
     
     // Types
     "type.brincolín": "Bouncy castle",

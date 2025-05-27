@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { testimonials } from "@/data/testimonials";
-import { Star, MapPin } from "lucide-react";
+import { Star, MapPin, Clock } from "lucide-react";
 
 const Index = () => {
   const { t, language } = useLanguage();
@@ -32,13 +32,27 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Sample Images - Replace with actual gallery images */}
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
-              <div key={index} className="aspect-square bg-beboy-purple/10 rounded-lg overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-beboy-yellow/20 text-beboy-purple">
-                  Imagen {index}
-                </div>
-              </div>
+      {[
+        "/gallery/1.png",
+        "/gallery/2.png",
+        "/gallery/3.png",
+        "/gallery/4.png",
+        "/gallery/5.png",
+        "/gallery/6.png",
+        "/gallery/7.png",
+        "/gallery/8.png",
+      ].map((src, index) => (
+        <div
+          key={index}
+          className="aspect-square rounded-lg overflow-hidden group relative"
+        >
+          <img
+            src={src}
+            alt={`Imagen ${index + 1}`}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+         
+          </div>
             ))}
           </div>
           
@@ -99,22 +113,38 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-lg shadow-md p-6">
-              <div className="flex items-start gap-4 mb-4">
-                <MapPin size={24} className="text-beboy-red flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium text-xl">{t("footer.location")}</h4>
-                  <p className="text-muted-foreground">
-                    Av. Ejemplo #123, Col. Centro<br />
-                    Ciudad de México, México
-                  </p>
-                </div>
-              </div>
-            </div>
+  <div className="bg-card rounded-lg shadow-md p-6">
+    <div className="flex items-start gap-4 mb-4">
+      <div>
+        {/* Título con ícono: Ubicación */}
+        <div className="flex items-center gap-2 mb-2">
+          <MapPin size={24} className="text-beboy-red flex-shrink-0" />
+          <h4 className="font-medium text-xl">{t("footer.location")}</h4>
+        </div>
+
+        <p className="text-muted-foreground mb-4">
+          Calle Venustiano Carranza 2-24<br />
+          Chapala Jal. México.
+        </p>
+
+        {/* Título con ícono: Horarios */}
+        <div className="flex items-center gap-2 mb-2 mt-6">
+          <Clock size={24} className="text-beboy-red flex-shrink-0" />
+          <h4 className="font-medium text-xl">{t("footer.horarios")}</h4>
+        </div>
+
+        <ul className="text-muted-foreground list-disc list-inside">
+          <li>Lunes a Viernes: 9:00 a.m. – 6:00 p.m.</li>
+          <li>Sábado: 10:00 a.m. – 2:00 p.m.</li>
+          <li>Domingo: Cerrado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
             
             <div className="rounded-lg overflow-hidden h-[300px] bg-muted shadow-md">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120545.72792049869!2d-99.1932226071383!3d19.32248660611324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico%20City%2C%20CDMX!5e0!3m2!1sen!2smx!4v1653318750458!5m2!1sen!2smx" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.0569610005405!2d-103.1925494249894!3d20.29790928117481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f40b15e3e2c85%3A0xa10edd0aa4f1f15b!2sCalle%20Venustiano%20Carranza%202-24%2C%20Chapala%20Centro%2C%2045900%20Chapala%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1747981009491!5m2!1ses-419!2smx" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

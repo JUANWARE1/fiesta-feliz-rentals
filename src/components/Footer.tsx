@@ -86,12 +86,12 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-2">
                 <MapPin size={20} className="flex-shrink-0 text-beboy-red" />
-                <span>México City, México</span>
+                <span>Chapala Jal, México.</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={20} className="flex-shrink-0 text-beboy-red" />
                 <a href="tel:+5215555555555" className="hover:text-beboy-red transition-colors">
-                  +52 1 55 5555 5555
+                  +52 
                 </a>
               </li>
               <li className="flex items-center gap-2">

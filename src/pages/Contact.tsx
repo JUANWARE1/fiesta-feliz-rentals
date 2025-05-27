@@ -30,7 +30,7 @@ const Contact = () => {
             <ContactForm />
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-6">{t("contact.contactInfo")}</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("Contactanos")}</h2>
             
             {/* Contact Information */}
             <div className="bg-muted p-6 rounded-lg mb-8">

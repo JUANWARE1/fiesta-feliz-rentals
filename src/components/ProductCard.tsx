@@ -27,7 +27,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       {/* Imagen representativa */}
       <div className="h-48 bg-beboy-yellow/10 flex items-center justify-center">
         <img 
-          src={`https://source.unsplash.com/300x300/?${encodeURIComponent(product.tipo.replace(" ", "+"))}`} 
+          src={product.imagen} 
           alt={product.nombre}
           className="w-full h-full object-cover"
         />
@@ -51,11 +51,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
           <Button 
             onClick={handleRentNow}
-            className="w-full bg-beboy-purple hover:bg-beboy-purple/90 gap-2"
+            className="w-full bg-beboy-purple hover:bg-beboy-purple/90 gap-2 text-white"
           >
             <MessageSquare className="h-4 w-4" />
             {t("products.rentNow")}
           </Button>
+
         </div>
       </CardContent>
     </Card>
