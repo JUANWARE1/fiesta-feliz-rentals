@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { t } = useLanguage();
@@ -24,15 +25,29 @@ const ContactForm = () => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Configuración de EmailJS
+      const serviceID = 'service_beboy'; // Necesitarás configurar esto
+      const templateID = 'template_beboy'; // Necesitarás configurar esto
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Necesitarás configurar esto
+
+      const templateParams = {
+        from_name: formState.name,
+        from_email: formState.email,
+        phone: formState.phone,
+        message: formState.message,
+        to_email: 'juan.jesus1518@gmail.com',
+      };
+
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      
       toast({
         title: t("contact.success"),
-        description: `${formState.name}, ${t("contact.success").toLowerCase()}`,
+        description: `${formState.name}, tu mensaje ha sido enviado correctamente`,
         variant: "default",
       });
       
@@ -43,8 +58,16 @@ const ContactForm = () => {
         message: "",
       });
       
+    } catch (error) {
+      console.error('Error enviando email:', error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -110,8 +133,15 @@ const ContactForm = () => {
         className="w-full bg-beboy-purple hover:bg-beboy-purple/90"
         disabled={loading}
       >
-        {loading ? "..." : t("contact.send")}
+        {loading ? "Enviando..." : t("contact.send")}
       </Button>
+      
+      <div className="text-sm text-muted-foreground text-center">
+        <p>Para configurar el envío de emails, necesitarás:</p>
+        <p>1. Crear una cuenta en EmailJS</p>
+        <p>2. Configurar un servicio y plantilla</p>
+        <p>3. Actualizar las claves en ContactForm.tsx</p>
+      </div>
     </form>
   );
 };

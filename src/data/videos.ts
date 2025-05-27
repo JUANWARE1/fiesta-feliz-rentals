@@ -4,8 +4,8 @@ import { Video } from "@/components/VideoCard";
 export const videos: Video[] = [
   {
     id: "1",
-    youtubeId: "JC_W6Z4gD8Y",
-    thumbnail: "https://img.youtube.com/vi/JC_W6Z4gD8Y/maxresdefault.jpg",
+    youtubeId: "", // Ya no necesario para MP4
+    thumbnail: "/videos/video1-thumb.jpg", // Miniatura personalizada
     title: {
       es: "Inflables divertidos para tus eventos",
       en: "Fun inflatables for your events"
@@ -13,12 +13,13 @@ export const videos: Video[] = [
     description: {
       es: "Descubre nuestra variedad de inflables para hacer de tu fiesta un momento inolvidable.",
       en: "Discover our variety of inflatables to make your party an unforgettable moment."
-    }
+    },
+    videoUrl: "/videos/video1.mp4" // Nueva propiedad para MP4 local
   },
   {
     id: "2",
-    youtubeId: "vjlMTs0H6Bo",
-    thumbnail: "https://img.youtube.com/vi/vjlMTs0H6Bo/maxresdefault.jpg",
+    youtubeId: "",
+    thumbnail: "/videos/video2-thumb.jpg",
     title: {
       es: "Carpas y mobiliario para eventos",
       en: "Tents and furniture for events"
@@ -26,12 +27,13 @@ export const videos: Video[] = [
     description: {
       es: "La mejor selección de carpas y mobiliario para tu evento al aire libre.",
       en: "The best selection of tents and furniture for your outdoor event."
-    }
+    },
+    videoUrl: "/videos/video2.mp4"
   },
   {
     id: "3",
-    youtubeId: "cJBUG3H2Avg",
-    thumbnail: "https://img.youtube.com/vi/cJBUG3H2Avg/maxresdefault.jpg",
+    youtubeId: "",
+    thumbnail: "/videos/video3-thumb.jpg",
     title: {
       es: "Toros mecánicos para diversión extrema",
       en: "Mechanical bulls for extreme fun"
@@ -39,12 +41,13 @@ export const videos: Video[] = [
     description: {
       es: "La atracción que no puede faltar en tu evento. ¡Diversión garantizada!",
       en: "The attraction that cannot be missing at your event. Fun guaranteed!"
-    }
+    },
+    videoUrl: "/videos/video3.mp4"
   },
   {
     id: "4",
-    youtubeId: "fLKHrhsJXYg",
-    thumbnail: "https://img.youtube.com/vi/fLKHrhsJXYg/maxresdefault.jpg",
+    youtubeId: "",
+    thumbnail: "/videos/video4-thumb.jpg",
     title: {
       es: "Castillos inflables para los más pequeños",
       en: "Bouncy castles for the little ones"
@@ -52,6 +55,7 @@ export const videos: Video[] = [
     description: {
       es: "Los mejores castillos inflables para que los niños se diviertan sin parar.",
       en: "The best bouncy castles for children to have non-stop fun."
-    }
+    },
+    videoUrl: "/videos/video4.mp4"
   }
 ];

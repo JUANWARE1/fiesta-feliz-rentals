@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -44,13 +45,10 @@ const Header = () => {
 
   return (
     <header
-  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white dark:bg-background/90 ${
-    scrolled ? "shadow-md py-2" : "py-4"
-  }`}
->
-
-  
-  
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white dark:bg-background/90 ${
+        scrolled ? "shadow-md py-2" : "py-4"
+      }`}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Logo />
         
@@ -62,7 +60,7 @@ const Header = () => {
                 className={`font-medium ${
                   location.pathname === item.path
                     ? "bg-primary text-primary-foreground"
-                    : "hover:bg-muted"
+                    : "text-foreground hover:bg-muted hover:text-foreground"
                 }`}
               >
                 {item.name}
@@ -107,7 +105,7 @@ const Header = () => {
                   className={`w-full font-medium ${
                     location.pathname === item.path
                       ? "bg-primary text-primary-foreground"
-                      : "hover:bg-muted"
+                      : "text-foreground hover:bg-muted hover:text-foreground"
                   }`}
                 >
                   {item.name}

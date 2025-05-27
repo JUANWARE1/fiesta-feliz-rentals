@@ -15,6 +15,7 @@ export interface Video {
     es: string;
     en: string;
   };
+  videoUrl?: string; // Nueva propiedad para MP4 local
 }
 
 interface VideoCardProps {
@@ -36,19 +37,28 @@ const VideoCard = ({ video }: VideoCardProps) => {
     <div className="rounded-lg overflow-hidden shadow-lg bg-card transition-all duration-300 hover:shadow-xl">
       <div className="relative aspect-video">
         {playing ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1`}
-            title={title}
-            className="w-full h-full border-none"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <video
+            src={video.videoUrl}
+            controls
+            autoPlay
+            className="w-full h-full object-cover"
+            onError={() => {
+              console.error("Error loading video:", video.videoUrl);
+              setPlaying(false);
+            }}
+          >
+            Tu navegador no soporta el elemento de video.
+          </video>
         ) : (
           <div className="relative w-full h-full group">
             <img
-              src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
+              src={video.thumbnail}
               alt={title}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback a una imagen por defecto si no se encuentra la miniatura
+                e.currentTarget.src = "/placeholder.svg";
+              }}
             />
             <div className="absolute inset-0 bg-beboy-purple/30 flex items-center justify-center transition-opacity group-hover:bg-beboy-purple/50">
               <button
