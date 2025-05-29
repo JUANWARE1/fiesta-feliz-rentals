@@ -134,9 +134,9 @@ const Index = () => {
         </div>
 
         <ul className="text-muted-foreground list-disc list-inside">
-          <li>Lunes a Viernes: 9:00 a.m. – 6:00 p.m.</li>
-          <li>Sábado: 10:00 a.m. – 2:00 p.m.</li>
-          <li>Domingo: Cerrado</li>
+          <li>{t("hours.monday-friday")}</li>
+          <li>{t("hours.saturday")}</li>
+          <li>{t("hours.sunday")}</li>
         </ul>
       </div>
     </div>

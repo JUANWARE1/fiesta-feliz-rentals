@@ -18,10 +18,10 @@ const Services = () => {
       title: t("services.tents"),
       description: t("services.tents.desc"),
       details: [
-        "Diferentes tamaños disponibles",
-        "Ideales para fiestas, eventos corporativos y reuniones familiares",
-        "Instalación incluida",
-        "Opciones con o sin paredes laterales"
+        t("tents.feature1"),
+        t("tents.feature2"),
+        t("tents.feature3"),
+        t("tents.feature4")
       ]
     },
     {
@@ -29,10 +29,10 @@ const Services = () => {
       title: t("services.inflatables"),
       description: t("services.inflatables.desc"),
       details: [
-        "Gran variedad de temáticas",
-        "Seguros y resistentes",
-        "Para todas las edades",
-        "Incluyen supervisión durante el evento"
+        t("inflatables.feature1"),
+        t("inflatables.feature2"),
+        t("inflatables.feature3"),
+        t("inflatables.feature4")
       ]
     },
     {
@@ -40,10 +40,10 @@ const Services = () => {
       title: t("services.rockolas"),
       description: t("services.rockolas.desc"),
       details: [
-        "Miles de canciones disponibles",
-        "Fáciles de usar",
-        "Sonido de alta calidad",
-        "Personalizables según el evento"
+        t("rockolas.feature1"),
+        t("rockolas.feature2"),
+        t("rockolas.feature3"),
+        t("rockolas.feature4")
       ]
     },
     {
@@ -51,10 +51,10 @@ const Services = () => {
       title: t("services.bulls"),
       description: t("services.bulls.desc"),
       details: [
-        "Diferentes niveles de dificultad",
-        "Incluye operador capacitado",
-        "Área acolchada para mayor seguridad",
-        "Ideal para eventos corporativos y fiestas"
+        t("bulls.feature1"),
+        t("bulls.feature2"),
+        t("bulls.feature3"),
+        t("bulls.feature4")
       ]
     },
     {
@@ -62,10 +62,10 @@ const Services = () => {
       title: t("services.drinks"),
       description: t("services.drinks.desc"),
       details: [
-        "Servicio de barras móviles",
-        "Bartenders profesionales",
-        "Menús personalizados",
-        "Opciones con y sin alcohol"
+        t("drinks.feature1"),
+        t("drinks.feature2"),
+        t("drinks.feature3"),
+        t("drinks.feature4")
       ]
     },
     {
@@ -73,10 +73,10 @@ const Services = () => {
       title: t("services.water"),
       description: t("services.water.desc"),
       details: [
-        "Ideales para días calurosos",
-        "Toboganes acuáticos",
-        "Piscinas inflables",
-        "Con medidas de seguridad incluidas"
+        t("water.feature1"),
+        t("water.feature2"),
+        t("water.feature3"),
+        t("water.feature4")
       ]
     },
   ];
@@ -103,7 +103,7 @@ const Services = () => {
                 className="mb-4 flex-1"
               />
               <div className="bg-muted p-4 rounded-lg">
-                <h4 className="font-medium mb-2">Características:</h4>
+                <h4 className="font-medium mb-2">{t("features.title")}</h4>
                 <ul className="list-disc pl-5 space-y-1">
                   {service.details.map((detail, i) => (
                     <li key={i} className="text-sm">{detail}</li>
