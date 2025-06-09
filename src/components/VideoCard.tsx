@@ -34,48 +34,48 @@ const VideoCard = ({ video }: VideoCardProps) => {
   };
 
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg bg-card transition-all duration-300 hover:shadow-xl">
-      <div className="relative aspect-video">
-        {playing ? (
-          <video
-            src={video.videoUrl}
-            controls
-            autoPlay
-            className="w-full h-full object-cover"
-            onError={() => {
-              console.error("Error loading video:", video.videoUrl);
-              setPlaying(false);
-            }}
+    <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-gradient-to-b from-white/90 to-card backdrop-blur-sm border border-border max-w-sm mx-auto">
+  <div className="relative aspect-[9/16] w-full">
+    {playing ? (
+      <video
+        src={video.videoUrl}
+        controls
+        autoPlay
+        className="w-full h-full object-contain bg-black rounded-t-2xl"
+        onError={() => {
+          console.error("Error loading video:", video.videoUrl);
+          setPlaying(false);
+        }}
+      >
+        Tu navegador no soporta el elemento de video.
+      </video>
+    ) : (
+      <div className="relative w-full h-full group">
+        <img
+          src={video.thumbnail}
+          alt={title}
+          className="w-full h-full object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-105"
+          onError={(e) => {
+            e.currentTarget.src = "/placeholder.svg";
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-beboy-purple/50 to-transparent flex items-center justify-center transition-opacity duration-300 group-hover:bg-beboy-purple/60">
+          <button
+            onClick={handlePlay}
+            className="bg-beboy-yellow text-beboy-black p-4 rounded-full shadow-md hover:shadow-lg hover:bg-beboy-yellow/90 transition-all transform hover:scale-110"
           >
-            Tu navegador no soporta el elemento de video.
-          </video>
-        ) : (
-          <div className="relative w-full h-full group">
-            <img
-              src={video.thumbnail}
-              alt={title}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                // Fallback a una imagen por defecto si no se encuentra la miniatura
-                e.currentTarget.src = "/placeholder.svg";
-              }}
-            />
-            <div className="absolute inset-0 bg-beboy-purple/30 flex items-center justify-center transition-opacity group-hover:bg-beboy-purple/50">
-              <button
-                onClick={handlePlay}
-                className="bg-beboy-yellow text-beboy-black p-4 rounded-full hover:bg-beboy-yellow/90 transition-transform group-hover:scale-110"
-              >
-                <Play className="h-8 w-8" />
-              </button>
-            </div>
-          </div>
-        )}
+            <Play className="h-8 w-8" />
+          </button>
+        </div>
       </div>
-      <div className="p-5">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
-      </div>
-    </div>
+    )}
+  </div>
+  <div className="p-5 space-y-2">
+    <h3 className="text-xl font-semibold text-foreground leading-snug">{title}</h3>
+    <p className="text-sm text-muted-foreground">{description}</p>
+  </div>
+</div>
+
   );
 };
 

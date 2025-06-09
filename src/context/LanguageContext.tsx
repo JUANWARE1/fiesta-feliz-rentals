@@ -38,7 +38,7 @@ const translations = {
     "services.water.desc": "Diversión acuática para días calurosos",
     
     // Videos
-    "videos.title": "Videos Funcionales",
+    "videos.title": "Nuestros Videos",
     "videos.subtitle": "Mira nuestros productos en acción",
     
     // Products
@@ -151,7 +151,7 @@ const translations = {
     "services.water.desc": "Water fun for hot days",
     
     // Videos
-    "videos.title": "Functional Videos",
+    "videos.title": "Our Videos",
     "videos.subtitle": "See our products in action",
     
     // Products

@@ -13,7 +13,7 @@ const ContactButtons = ({ vertical = false }: { vertical?: boolean }) => {
       <Button 
         size="lg" 
         className={`bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center ${vertical ? 'flex-col py-6' : 'gap-2'} shadow-lg`}
-        onClick={() => window.open(`https://wa.me/${phoneNumber}`, '_blank')}
+        onClick={() => window.open(`https://wa.me/${3331051698}`, '_blank')}
       >
         <MessageSquare className="h-5 w-5" />
         <span>{t("contact.whatsapp")}</span>

@@ -40,8 +40,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium">{t("footer.phone")}</h4>
                     <p className="text-muted-foreground">
-                      +52 33 2034 3573<br />
-                      +52 1 55 4444 4444
+                      +52 33 3105 1698<br />
+                    
                     </p>
                   </div>
                 </div>
@@ -51,8 +51,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium">{t("footer.email")}</h4>
                     <p className="text-muted-foreground">
-                      info@diversionesbeboys.com<br />
-                      contacto@diversionesbeboys.com
+                    diversiones_beboys@hotmail.com<br />
+                    
                     </p>
                   </div>
                 </div>

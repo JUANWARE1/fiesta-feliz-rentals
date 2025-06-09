@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-beboy-yellow flex items-center justify-center animate-bounce-sm overflow-hidden">
                 <img 
-                  src="/lovable-uploads/d05cddfb-b883-4c18-9e47-d84cd8aa0b10.png" 
+                  src="/lovable-uploads/logo.png" 
                   alt="Diversiones Beboy's Logo" 
                   className="w-full h-full object-contain p-4"
                 />

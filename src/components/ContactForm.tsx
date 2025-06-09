@@ -129,18 +129,16 @@ const ContactForm = () => {
       </div>
 
       <Button
-        type="submit"
-        className="w-full bg-beboy-purple hover:bg-beboy-purple/90"
-        disabled={loading}
-      >
-        {loading ? "Enviando..." : t("contact.send")}
-      </Button>
+  type="submit"
+  className="w-full bg-beboy-purple hover:bg-beboy-purple/90 text-white"
+  disabled={loading}
+>
+  {loading ? "Enviando..." : t("contact.send")}
+</Button>
+
       
       <div className="text-sm text-muted-foreground text-center">
-        <p>Para configurar el envío de emails, necesitarás:</p>
-        <p>1. Crear una cuenta en EmailJS</p>
-        <p>2. Configurar un servicio y plantilla</p>
-        <p>3. Actualizar las claves en ContactForm.tsx</p>
+        
       </div>
     </form>
   );

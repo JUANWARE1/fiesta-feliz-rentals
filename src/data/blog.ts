@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     },
     author: "María López",
     date: "2023-11-15",
-    image: "https://images.unsplash.com/photo-1604014059310-fc4b29bed88f?q=80&w=2070"
+    image: "/gallery/11.png"
   },
   {
     id: "organizing-events",
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     },
     author: "Carlos Rodríguez",
     date: "2023-10-28",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070"
+    image: "/gallery/1.png"
   },
   {
     id: "inflatable-safety",
@@ -173,6 +173,6 @@ export const blogPosts: BlogPost[] = [
     },
     author: "Ana Martínez",
     date: "2023-12-05",
-    image: "https://images.unsplash.com/photo-1633218388467-310e41a9d1f0?q=80&w=1974"
+    image: "/gallery/3.png"
   }
 ];

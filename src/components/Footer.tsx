@@ -91,13 +91,13 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Phone size={20} className="flex-shrink-0 text-beboy-red" />
                 <a href="tel:+5215555555555" className="hover:text-beboy-red transition-colors">
-                  +52 
+                  +52 33 3105 1698
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={20} className="flex-shrink-0 text-beboy-red" />
                 <a href="mailto:info@diversionesbeboys.com" className="hover:text-beboy-red transition-colors">
-                  info@diversionesbeboys.com
+                diversiones_beboys@hotmail.com
                 </a>
               </li>
             </ul>

@@ -8,7 +8,7 @@ const Logo = () => {
       className="flex items-center gap-2 transition-transform duration-300 hover:scale-105"
     >
       <img
-        src="/lovable-uploads/d05cddfb-b883-4c18-9e47-d84cd8aa0b10.png" 
+        src="/lovable-uploads/logo.png" 
         alt="Diversiones Beboy's"
         className="h-12 w-12 rounded-full"
       />

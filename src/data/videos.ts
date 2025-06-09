@@ -5,14 +5,14 @@ export const videos: Video[] = [
   {
     id: "1",
     youtubeId: "", // Ya no necesario para MP4
-    thumbnail: "/images/toro-mecanico.png", // Miniatura personalizada
+    thumbnail: "/images/logo.png", // Miniatura personalizada
     title: {
-      es: "Inflables divertidos para tus eventos",
-      en: "Fun inflatables for your events"
+      es: "¡El Toro Mecánico que Tu Evento Necesita!",
+      en: "The Mechanical Bull Your Event Needs!"
     },
     description: {
-      es: "Descubre nuestra variedad de inflables para hacer de tu fiesta un momento inolvidable.",
-      en: "Discover our variety of inflatables to make your party an unforgettable moment."
+      es: "Sorprende a tus invitados con la atracción estrella de cualquier fiesta: nuestro toro mecánico. Seguro, divertido y perfecto para todas las edades. ¡Convierte tu evento en una experiencia inolvidable y llena de emoción! Reserva hoy y asegura la diversión.",
+      en: "Surprise your guests with the ultimate party attraction – our mechanical bull! Safe, exciting, and perfect for all ages. Turn your event into an unforgettable and thrilling experience. Book now and guarantee the fun!"
     },
     videoUrl: "/videos/video1.mp4" // Nueva propiedad para MP4 local
   },
