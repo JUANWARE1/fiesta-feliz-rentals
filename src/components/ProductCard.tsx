@@ -4,6 +4,7 @@ import { Product } from "@/data/products";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
+import { useWhatsAppRent } from "@/hooks/useWhatsAppRent";
 
 interface ProductCardProps {
   product: Product;
@@ -11,17 +12,11 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { t } = useLanguage();
+  const { sendWhatsAppMessage } = useWhatsAppRent();
   
   const handleRentNow = () => {
-    const phoneNumber = "523331051698";
-    const nombre = product?.nombre || "Producto";
-    const tipo = product?.tipo || "Tipo";
-    const message = `Hola, estoy interesado en rentar: ${nombre} (${tipo})`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
+    sendWhatsAppMessage(product);
   };
-  
-  
   
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
@@ -61,7 +56,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <MessageSquare className="h-4 w-4" />
             {t("products.rentNow")}
           </Button>
-
         </div>
       </CardContent>
     </Card>
