@@ -13,11 +13,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const { t } = useLanguage();
   
   const handleRentNow = () => {
-    const phoneNumber = "523321998403";
+    const phoneNumber = "523331051698";
     const nombre = product?.nombre || "Producto";
     const tipo = product?.tipo || "Tipo";
-    const message = encodeURIComponent(`Hola, estoy interesado en rentar: ${nombre} (${tipo})`);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+    const message = `Hola, estoy interesado en rentar: ${nombre} (${tipo})`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
   
